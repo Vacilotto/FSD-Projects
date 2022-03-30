@@ -1,0 +1,15 @@
+C:\Users\marce\Documents\GitHub\FSD-training\Phase1Section38\bin\Debug\net6.0\Phase1Section38.exe
+C:\Users\marce\Documents\GitHub\FSD-training\Phase1Section38\bin\Debug\net6.0\Phase1Section38.deps.json
+C:\Users\marce\Documents\GitHub\FSD-training\Phase1Section38\bin\Debug\net6.0\Phase1Section38.runtimeconfig.json
+C:\Users\marce\Documents\GitHub\FSD-training\Phase1Section38\bin\Debug\net6.0\Phase1Section38.dll
+C:\Users\marce\Documents\GitHub\FSD-training\Phase1Section38\bin\Debug\net6.0\Phase1Section38.pdb
+C:\Users\marce\Documents\GitHub\FSD-training\Phase1Section38\obj\Debug\net6.0\Phase1Section38.csproj.AssemblyReference.cache
+C:\Users\marce\Documents\GitHub\FSD-training\Phase1Section38\obj\Debug\net6.0\Phase1Section38.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marce\Documents\GitHub\FSD-training\Phase1Section38\obj\Debug\net6.0\Phase1Section38.AssemblyInfoInputs.cache
+C:\Users\marce\Documents\GitHub\FSD-training\Phase1Section38\obj\Debug\net6.0\Phase1Section38.AssemblyInfo.cs
+C:\Users\marce\Documents\GitHub\FSD-training\Phase1Section38\obj\Debug\net6.0\Phase1Section38.csproj.CoreCompileInputs.cache
+C:\Users\marce\Documents\GitHub\FSD-training\Phase1Section38\obj\Debug\net6.0\Phase1Section38.dll
+C:\Users\marce\Documents\GitHub\FSD-training\Phase1Section38\obj\Debug\net6.0\refint\Phase1Section38.dll
+C:\Users\marce\Documents\GitHub\FSD-training\Phase1Section38\obj\Debug\net6.0\Phase1Section38.pdb
+C:\Users\marce\Documents\GitHub\FSD-training\Phase1Section38\obj\Debug\net6.0\Phase1Section38.genruntimeconfig.cache
+C:\Users\marce\Documents\GitHub\FSD-training\Phase1Section38\obj\Debug\net6.0\ref\Phase1Section38.dll
