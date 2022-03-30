@@ -7,4 +7,13 @@ public class Student {
         id = 0;
         classandsection = "";
     }
+    public Student(string nm, int Id, string clss){
+        name = nm;
+        id = Id;
+        classandsection = clss;
+    }
+
+    public string oneLiner(){
+        return $"{name};{id};{classandsection}";
+    }
 }
