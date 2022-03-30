@@ -1,4 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System.Text;
+
+// See https://aka.ms/new-console-template for more information
 DoApp();
 
 void DoApp(){
@@ -24,4 +26,21 @@ void DoApp(){
         System.Console.Write(c);
     System.Console.WriteLine();
     System.Console.WriteLine(sentence[20]);
+
+    System.Console.WriteLine("The sentence contains the letter h : "+ sentence.Contains('h'));
+    System.Console.WriteLine("The sentence contains the letter te : "+ sentence.Contains("te"));
+
+    System.Console.WriteLine(sentence.ToUpper());
+    System.Console.WriteLine(sentence.ToLower());
+
+    string[] words = sentence.Split(" ");
+    foreach(string s in words)
+        System.Console.Write(s);
+    System.Console.WriteLine();
+    StringBuilder sb = new StringBuilder();
+    foreach(string s in words){
+        sb.Append(s + "; ");
+    }
+    sb.Length-=2;
+    System.Console.WriteLine(sb.ToString());
 }
