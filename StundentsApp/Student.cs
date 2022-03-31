@@ -1,13 +1,13 @@
-public class Student {
-    private string name {get;set;}
-    private string id {get;set;}
-    private string classandsection {get;set;}
-    public Student (){
+public class Teacher {
+    public string name {get;set;}
+    public string id {get;set;}
+    public string classandsection {get;set;}
+    public Teacher (){
         name = "";
         id = "";
         classandsection = "";
     }
-    public Student(string nm, string Id, string clss){
+    public Teacher(string nm, string Id, string clss){
         name = nm;
         id = Id;
         classandsection = clss;
