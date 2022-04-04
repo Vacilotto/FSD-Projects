@@ -1,10 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-using Phase1Section47b;
+﻿using Phase1Section47b;
 
 RunApp();
-
-async voide RunApp(){
+void RunApp(){
     SingleLinkedStringList list = new SingleLinkedStringList();
     StringNode node = new StringNode();
     node.Data = "Root";
@@ -13,5 +10,12 @@ async voide RunApp(){
     for(int i = 0; i< 10; i++){
         StringNode newNode = new StringNode(i.ToString());
         list.Add(newNode);
+    }
+    System.Console.WriteLine($"Length of singly linked list = {list.Length}");
+    StringNode nodeRef = list.Root;
+
+    while(nodeRef!= null){
+        System.Console.WriteLine(nodeRef.Data);
+        nodeRef = nodeRef.Next;
     }
 }
