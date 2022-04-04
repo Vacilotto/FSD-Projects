@@ -19,7 +19,7 @@ namespace Phase1Section47b{
             internal StringNode Root{get; private set;}
             internal int Length {get; private set;}
             internal StringNode CurrentNode{get; private set;}
-            internal StringNode Next {get{return Current.Next;}}
+            internal StringNode Next {get{return CurrentNode.Next;}}
             internal SingleLinkedStringList(){
 
             }
@@ -29,35 +29,35 @@ namespace Phase1Section47b{
                         {
                             Root = node;
                             Length = 1;
-                            Current = node;
+                            CurrentNode = node;
                         }
                     else{
-                        Current.Next = node;
-                        Current = node;
+                        CurrentNode.Next = node;
+                        CurrentNode = node;
                         Length++;
                 }
             }
 
             internal void Add(string Data){
-                StringNode node = new StringNode(s);
+                StringNode node = new StringNode(Data);
                 if(Root == null)
                         {
                             Root = node;
                             Length = 1;
-                            Current = node;
+                            CurrentNode = node;
                         }
                     else{
-                        Current.Next = node;
-                        Current = node;
+                        CurrentNode.Next = node;
+                        CurrentNode = node;
                         Length++;
                 }
             }
 
             internal void GoToStart(){
-                Current = Root;
+                CurrentNode = Root;
             }
             internal void GoToNext(){
-                Current = Next;
+                CurrentNode = Next;
             }
         }
     

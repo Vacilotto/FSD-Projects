@@ -19,7 +19,7 @@ async void RunApp(){
     for(int i = 0; i<6; i++){
         marks[i] = 100- (i*3);
     } 
-    */
+   
 
     object[][] subjectGrades = new object[6][6]{{"Physics",100},{},{},{}};
 
