@@ -89,4 +89,12 @@ class TeacherInterface
 
         return support;
     }
+
+    public static void listTeachers(List<Teacher> list){
+        System.Console.WriteLine("Name;Id;Class");
+        foreach(Teacher t in list){
+            string s = t.oneLiner(); 
+            System.Console.WriteLine(s);
+        }
+    }
 }

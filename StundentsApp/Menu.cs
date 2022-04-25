@@ -7,6 +7,8 @@ Main();
 
 void Main()
 {
+    mainMenu();
+    /*
     string fileName = Directory.GetCurrentDirectory() + "\\data.txt";
     List<Teacher> listTeachers = new List<Teacher>();
     if (File.Exists(fileName))
@@ -24,7 +26,7 @@ void Main()
     File.Delete(fileName);
 
     updateFile(fileName, textToFile);
-
+    */
 
 }
 
@@ -68,9 +70,9 @@ string[] genListToSave(List<Teacher> list)
 {
     List<string> text = new List<string>();
     text.Add("Name;Id;Class");
-    foreach (Teacher stud in list)
+    foreach (Teacher teacher in list)
     {
-        string s = $"{stud.name};{stud.id};{stud.classandsection}";
+        string s = $"{teacher.name};{teacher.id};{teacher.classandsection}";
         text.Add(s);
     }
     return text.ToArray();
@@ -94,10 +96,8 @@ void createFile(string fileName)
 {
     using (StreamWriter sw = File.CreateText(fileName))
     {
-    
-            sw.WriteLine("Name;Id;Class");
-        
-    } 
+        sw.WriteLine("Name;Id;Class");
+    }
 }
 
 
@@ -136,41 +136,42 @@ void mainMenu()
         }
     }
     //Executing the main menu options which are: Listing, Updating, Adding and removing.
-    else
+    while (true)
     {
         System.Console.WriteLine("\nPlease select one of below options:\n 1 - List all teachers\n 2 - Add a new teacher\n 3 - Remove a teacher\n 4 - Update an existing teacher" +
-        "\n 5 - Close application");
-        while (true)
+            "\n 5 - Close application");
+        string ans = Console.ReadLine();
+        if (ans == null || !"12345".Contains(ans))
         {
-            string ans = Console.ReadLine();
-            if (ans == null || !"12345".Contains(ans))
+            System.Console.WriteLine("Invalid option, please select one of the valid options below.");
+        }
+        else
+        {
+            switch (ans)
             {
-                System.Console.WriteLine("Invalid option, please select one of the valid options above.");
-            }
-            else
-            {
-                switch (ans)
-                {
-                    case "1":
+                case "1":
+                    TeacherInterface.listTeachers(listTeachers);
+                    break;
+                case "2":
 
-                        break;
-                    case "2":
+                    break;
+                case "3":
 
-                        break;
-                    case "3":
+                    break;
+                case "4":
 
-                        break;
-                    case "4":
+                    break;
+                case "5":
+                    string[] textToFile = genListToSave(listTeachers);
+                    File.Delete(fileName);
 
-                        break;
-                    case "5":
-                        updateFile(fileName, genListToSave(listTeachers));
-                        Environment.Exit(1);
-                        break;
-                }
+                    updateFile(fileName, textToFile);
+                    Environment.Exit(1);
+                    break;
             }
         }
-
-
     }
+
+
+
 }
