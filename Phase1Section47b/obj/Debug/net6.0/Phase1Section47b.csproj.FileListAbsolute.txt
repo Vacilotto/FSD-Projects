@@ -1,5 +1,0 @@
-C:\Users\marce\Documents\GitHub\FSD-training\Phase1Section47b\obj\Debug\net6.0\Phase1Section47b.csproj.AssemblyReference.cache
-C:\Users\marce\Documents\GitHub\FSD-training\Phase1Section47b\obj\Debug\net6.0\Phase1Section47b.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\marce\Documents\GitHub\FSD-training\Phase1Section47b\obj\Debug\net6.0\Phase1Section47b.AssemblyInfoInputs.cache
-C:\Users\marce\Documents\GitHub\FSD-training\Phase1Section47b\obj\Debug\net6.0\Phase1Section47b.AssemblyInfo.cs
-C:\Users\marce\Documents\GitHub\FSD-training\Phase1Section47b\obj\Debug\net6.0\Phase1Section47b.csproj.CoreCompileInputs.cache
