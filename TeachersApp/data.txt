@@ -1,6 +1,5 @@
 Name;Id;Class
 Carlos;1;Filosofia
-Mateus;2;Matematica
 Jorge;3;Ingles
 Maria;4;Libras
 Fernanda;5;Artes

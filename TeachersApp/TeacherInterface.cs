@@ -41,7 +41,6 @@ class TeacherInterface
     // Method created to remove a teacher from the file using 2 different criteria to remove
     static List<Teacher> removeByName(List<Teacher> list, string name)
     {
-        List<Teacher> support = new List<Teacher>();
         foreach (Teacher tc in list.ToList())
         {
             if (tc.name == name)
@@ -50,12 +49,11 @@ class TeacherInterface
             }
         }
 
-        return support;
+        return list;
     }
 
     static List<Teacher> removeById(List<Teacher> list, string id)
     {
-        List<Teacher> support = new List<Teacher>();
         foreach (Teacher tc in list.ToList())
         {
             if (tc.id == id)
@@ -64,7 +62,7 @@ class TeacherInterface
             }
         }
 
-        return support;
+        return list;
     }
 
 

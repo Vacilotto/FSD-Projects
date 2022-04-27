@@ -12,7 +12,7 @@
             "program": "${workspaceFolder}/TeachersApp/bin/Debug/net6.0/StundentsApp.dll",
             "args": [],
             "cwd": "${workspaceFolder}/TeachersApp",
-            "console": "internalConsole",
+            "console": "integratedTerminal",
             "stopAtEntry": false
         },
         {
