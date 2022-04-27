@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marce\\Documents\\GitHub\\FSD-training\\StundentsApp\\StundentsApp.csproj",
+      "projectUniqueName": "C:\\Users\\marce\\Documents\\GitHub\\FSD-training\\TeachersApp\\StundentsApp.csproj",
       "projectName": "StundentsApp",
-      "projectPath": "C:\\Users\\marce\\Documents\\GitHub\\FSD-training\\StundentsApp\\StundentsApp.csproj",
+      "projectPath": "C:\\Users\\marce\\Documents\\GitHub\\FSD-training\\TeachersApp\\StundentsApp.csproj",
       "packagesPath": "C:\\Users\\marce\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marce\\Documents\\GitHub\\FSD-training\\StundentsApp\\obj\\",
+      "outputPath": "C:\\Users\\marce\\Documents\\GitHub\\FSD-training\\TeachersApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\marce\\AppData\\Roaming\\NuGet\\NuGet.Config"
