@@ -1,9 +1,10 @@
 Name;Id;Class
 Carlos;1;Filosofia
-Mateus;2;Matematica
+Felipe;2;Matematica
 Jorge;3;Ingles
 Maria;4;Libras
 Fernanda;5;Artes
-Gustavo;6;math
+Gustavo;6;Math
 Marcela;8;History
-Renato;9;Arts
+Renata;9;Biology
+Renato;12;Physics

@@ -8,26 +8,6 @@ Main();
 void Main()
 {
     mainMenu();
-    /*
-    string fileName = Directory.GetCurrentDirectory() + "\\data.txt";
-    List<Teacher> listTeachers = new List<Teacher>();
-    if (File.Exists(fileName))
-    {
-        string[] lines = File.ReadAllLines(fileName);
-        listTeachers = generateList(lines);
-    }
-    else
-    {
-        System.Console.WriteLine("File isn't present on the specified path.\n" +
-    $"Specified file path: {fileName}");
-    }
-
-    string[] textToFile = genListToSave(listTeachers);
-    File.Delete(fileName);
-
-    updateFile(fileName, textToFile);
-    */
-
 }
 
 // Method created to act as the main menu for the application

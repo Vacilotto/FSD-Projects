@@ -25,12 +25,32 @@ class TeacherInterface
         return null;
     }
 
-    static List<Teacher> updateTeacherById(List<Teacher> list, string id, string newId)
+    static List<Teacher> updateTeacherId(List<Teacher> list, string id, string newId)
     {
         foreach (Teacher tc in list)
             if (tc.id == id)
             {
                 tc.id = newId;
+            }
+        return list;
+    }
+
+    static List<Teacher> updateTeacherName(List<Teacher> list, string id, string name)
+    {
+        foreach (Teacher tc in list)
+            if (tc.id == id)
+            {
+                tc.name = name;
+            }
+        return list;
+    }
+
+    static List<Teacher> updateTeacherClass(List<Teacher> list, string id, string classe)
+    {
+        foreach (Teacher tc in list)
+            if (tc.id == id)
+            {
+                tc.classandsection = classe;
             }
         return list;
     }
@@ -98,21 +118,31 @@ class TeacherInterface
 
     public static List<Teacher> Update(List<Teacher> listTeachers, string option)
     {
-        if (option == "1") {
-            
+        if (option == "1")
+        {
+            System.Console.WriteLine("Insert the Id of the teacher you want to update: ");
+            var id = Console.ReadLine();
+            System.Console.WriteLine("Insert the new name you want to use");
+            var name = Console.ReadLine();
+            listTeachers = updateTeacherName(listTeachers, id, name);
         }
 
         else if (option == "2")
         {
-            System.Console.WriteLine("Insert the Id you want to update: ");
+            System.Console.WriteLine("Insert the Id of the teacher you want to update: ");
             var id = Console.ReadLine();
-            System.Console.WriteLine("Insert the new ID you want to update");
+            System.Console.WriteLine("Insert the new ID you want to use");
             var newId = Console.ReadLine();
-            listTeachers = updateTeacherById(listTeachers, id, newId);
+            listTeachers = updateTeacherId(listTeachers, id, newId);
         }
 
-        else { 
-
+        else
+        {
+            System.Console.WriteLine("Insert the Id of the teacher you want to update: ");
+            var id = Console.ReadLine();
+            System.Console.WriteLine("Insert the new class you want to use");
+            var classe = Console.ReadLine();
+            listTeachers = updateTeacherClass(listTeachers, id, classe);
         }
         return listTeachers;
     }
