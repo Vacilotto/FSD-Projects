@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/Phase1Section34/Phase1Section34.csproj",
+                "${workspaceFolder}/TeachersApp/StundentsApp.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/Phase1Section34/Phase1Section34.csproj",
+                "${workspaceFolder}/TeachersApp/StundentsApp.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/Phase1Section34/Phase1Section34.csproj"
+                "${workspaceFolder}/TeachersApp/StundentsApp.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

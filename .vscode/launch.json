@@ -9,9 +9,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/Phase1Section34/bin/Debug/net6.0/Phase1Section34.dll",
+            "program": "${workspaceFolder}/TeachersApp/bin/Debug/net6.0/StundentsApp.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Phase1Section34",
+            "cwd": "${workspaceFolder}/TeachersApp",
             "console": "internalConsole",
             "stopAtEntry": false
         },

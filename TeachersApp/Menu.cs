@@ -35,7 +35,7 @@ void mainMenu()
 {
     string fileName = Directory.GetCurrentDirectory() + "\\data.txt";
 
-    System.Console.WriteLine("Welcome to Rainbow School system.");
+    System.Console.WriteLine("#################################\nWelcome to Rainbow School system.\n#################################");
     System.Console.WriteLine($"We're going to load the Teachers list from {fileName} \n");
     //Loading the list and storing it in the memory
     List<Teacher> listTeachers = loadList(fileName);
@@ -102,18 +102,46 @@ void mainMenu()
 
                 //Removing a teacher
                 case "3":
+                    System.Console.WriteLine("Do you want to remove by name(1) or id(2)? Go back(3)");
+                    string option = new string("");
+                    option = Console.ReadLine();
+                    bool check = new bool();
+                    check = true;
+                    while (check)
+                    {
+                        if (option == null || !"123".Contains(option))
+                        {
+                            System.Console.WriteLine("Invalid option, please select one of the valid options below.");
+                            System.Console.WriteLine("Do you want to remove by name(1) or id(2)? Go back(3)");
+                            option = Console.ReadLine();
+                        }
+                        else
+                        {
+                            check = false;
+                        }
+                    }
+                    if (option == "3")
+                    {
+                        break;
+                    }
 
+                    listTeachers = TeacherInterface.Remove(listTeachers, option);
+                    Thread.Sleep(1000);
+                    TeacherInterface.listTeachers(listTeachers);
+                    
                     break;
 
                 //Updating a teacher
                 case "4":
 
                     System.Console.WriteLine("Do you want to update by name(1), id(2) or class(3)? Go back(4)");
-                    string option = Console.ReadLine();
-                    bool check = true;
-                    while (check)
+                    string option2 = new string("");
+                    option2 = Console.ReadLine();
+                    bool check2 = new bool();
+                    check2 = true;
+                    while (check2)
                     {
-                        if (option == null || !"1234".Contains(option))
+                        if (option2 == null || !"1234".Contains(option2))
                         {
                             System.Console.WriteLine("Invalid option, please select one of the valid options below.");
                             System.Console.WriteLine("Do you want to update by name(1), id(2) or class(3) Go back(4)?");
@@ -124,14 +152,16 @@ void mainMenu()
                             check = false;
                         }
                     }
-                    if (option == "4")
+                    if (option2 == "4")
                     {
                         break;
                     }
                     //listTeachers = TeacherInterface.Update(listTeachers, option);
                     System.Console.WriteLine("\nThe teachers list have been updated, here's the current list:\n");
+                    Thread.Sleep(1000);
                     TeacherInterface.listTeachers(listTeachers);
                     System.Console.WriteLine();
+
                     break;
 
                 case "5":
