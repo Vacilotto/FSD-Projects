@@ -79,21 +79,63 @@ void mainMenu()
         {
             switch (ans)
             {
+                //Listing all teachers
                 case "1":
+
                     System.Console.WriteLine("\n");
                     Thread.Sleep(1000);
                     TeacherInterface.listTeachers(listTeachers);
                     break;
+
+                //Adding a new teacher
                 case "2":
 
+                    System.Console.Write("Name: ");
+                    string name = Console.ReadLine();
+                    System.Console.Write("Class: ");
+                    string classe = Console.ReadLine();
+
+                    listTeachers = TeacherInterface.addTeacher(listTeachers, name, classe);
+                    Thread.Sleep(1000);
+                    TeacherInterface.listTeachers(listTeachers);
                     break;
+
+                //Removing a teacher
                 case "3":
 
                     break;
+
+                //Updating a teacher
                 case "4":
 
+                    System.Console.WriteLine("Do you want to update by name(1), id(2) or class(3)? Go back(4)");
+                    string option = Console.ReadLine();
+                    bool check = true;
+                    while (check)
+                    {
+                        if (option == null || !"1234".Contains(option))
+                        {
+                            System.Console.WriteLine("Invalid option, please select one of the valid options below.");
+                            System.Console.WriteLine("Do you want to update by name(1), id(2) or class(3) Go back(4)?");
+                            option = Console.ReadLine();
+                        }
+                        else
+                        {
+                            check = false;
+                        }
+                    }
+                    if (option == "4")
+                    {
+                        break;
+                    }
+                    //listTeachers = TeacherInterface.Update(listTeachers, option);
+                    System.Console.WriteLine("\nThe teachers list have been updated, here's the current list:\n");
+                    TeacherInterface.listTeachers(listTeachers);
+                    System.Console.WriteLine();
                     break;
+
                 case "5":
+
                     string[] textToFile = genListToSave(listTeachers);
                     File.Delete(fileName);
 
@@ -102,6 +144,7 @@ void mainMenu()
                     System.Console.WriteLine("Bye bye.");
                     Environment.Exit(1);
                     break;
+
             }
         }
     }

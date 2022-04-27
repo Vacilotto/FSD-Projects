@@ -82,19 +82,23 @@ class TeacherInterface
     }
 
     // Method for creation of new teacher
-    List<Teacher> addTeacher(List<Teacher> list, string name, string id, string clas)
+    public static List<Teacher> addTeacher(List<Teacher> list, string name, string clas)
     {
-        List<Teacher> support = new List<Teacher>();
-        support.Add(new Teacher(name, id, clas));
-
-        return support;
+        list.Add(new Teacher(name, (list.Count()+1).ToString(), clas));
+        return list;
     }
 
+    //Method created to print the list of teachers on the console
     public static void listTeachers(List<Teacher> list){
         System.Console.WriteLine("Name;Id;Class");
         foreach(Teacher t in list){
             string s = t.oneLiner(); 
             System.Console.WriteLine(s);
         }
+    }
+
+    public static List<Teacher> Update(List<Teacher> listTeachers, string option)
+    {
+        return null;
     }
 }
