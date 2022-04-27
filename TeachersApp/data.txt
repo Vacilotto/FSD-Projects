@@ -5,3 +5,5 @@ Jorge;3;Ingles
 Maria;4;Libras
 Fernanda;5;Artes
 Gustavo;6;math
+Marcela;8;History
+Renato;9;Arts

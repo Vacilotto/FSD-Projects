@@ -84,7 +84,9 @@ class TeacherInterface
     // Method for creation of new teacher
     public static List<Teacher> addTeacher(List<Teacher> list, string name, string clas)
     {
-        list.Add(new Teacher(name, (list.Count()+1).ToString(), clas));
+        var last = list.Last();
+        int id = Int32.Parse(last.id);
+        list.Add(new Teacher(name, (id+1).ToString(), clas));
         return list;
     }
 
