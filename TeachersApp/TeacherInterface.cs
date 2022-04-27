@@ -4,7 +4,7 @@ class TeacherInterface
     // Methods created to search for a specific teacher usign 3 different criteria
 
     // Search Teacher by Name
-    Teacher searchTeacherByName(List<Teacher> list, String name)
+    Teacher searchTeacherByName(List<Teacher> list, string name)
     {
         foreach (Teacher tc in list)
             if (tc.name == name)
@@ -15,7 +15,7 @@ class TeacherInterface
     }
 
     // Search Teacher by ID
-    Teacher searchTeacherById(List<Teacher> list, String id)
+    Teacher searchTeacherById(List<Teacher> list, string id)
     {
         foreach (Teacher tc in list)
             if (tc.id == id)
@@ -23,6 +23,16 @@ class TeacherInterface
                 return tc;
             }
         return null;
+    }
+
+    static List<Teacher> updateTeacherById(List<Teacher> list, string id, string newId)
+    {
+        foreach (Teacher tc in list)
+            if (tc.id == id)
+            {
+                tc.id = newId;
+            }
+        return list;
     }
 
     // Search all teachers who works with selected class
@@ -88,23 +98,39 @@ class TeacherInterface
 
     public static List<Teacher> Update(List<Teacher> listTeachers, string option)
     {
-        if (option == "1") { }
-        else { }
-        return null;
+        if (option == "1") {
+            
+        }
+
+        else if (option == "2")
+        {
+            System.Console.WriteLine("Insert the Id you want to update: ");
+            var id = Console.ReadLine();
+            System.Console.WriteLine("Insert the new ID you want to update");
+            var newId = Console.ReadLine();
+            listTeachers = updateTeacherById(listTeachers, id, newId);
+        }
+
+        else { 
+
+        }
+        return listTeachers;
     }
 
     public static List<Teacher> Remove(List<Teacher> listTeachers, string option)
     {
-        if (option == "1") {
+        if (option == "1")
+        {
             System.Console.WriteLine("Input the name of the teacher to be removed: ");
             string name = Console.ReadLine();
-            listTeachers = removeByName(listTeachers,name);
-         }
-        else {  
+            listTeachers = removeByName(listTeachers, name);
+        }
+        else
+        {
             System.Console.WriteLine("Input the ID of the teacher to be removed: ");
             string id = Console.ReadLine();
-            listTeachers = removeById(listTeachers,id);
-         }
+            listTeachers = removeById(listTeachers, id);
+        }
         return listTeachers;
     }
 }

@@ -128,35 +128,38 @@ void mainMenu()
                     listTeachers = TeacherInterface.Remove(listTeachers, option);
                     Thread.Sleep(1000);
                     TeacherInterface.listTeachers(listTeachers);
-                    
+
                     break;
 
                 //Updating a teacher
                 case "4":
 
-                    System.Console.WriteLine("Do you want to update by name(1), id(2) or class(3)? Go back(4)");
                     string option2 = new string("");
-                    option2 = Console.ReadLine();
+                    System.Console.WriteLine("Do you want to update name(1), id(2) or class(3)? Go back(4)");
                     bool check2 = new bool();
                     check2 = true;
                     while (check2)
                     {
+                        
+                        option2 = Console.ReadLine();
+
                         if (option2 == null || !"1234".Contains(option2))
                         {
                             System.Console.WriteLine("Invalid option, please select one of the valid options below.");
-                            System.Console.WriteLine("Do you want to update by name(1), id(2) or class(3) Go back(4)?");
+                            System.Console.WriteLine("Do you want to update name(1), id(2) or class(3) Go back(4)?");
                             option = Console.ReadLine();
                         }
                         else
                         {
-                            check = false;
+                            check2 = false;
                         }
                     }
                     if (option2 == "4")
                     {
                         break;
                     }
-                    //listTeachers = TeacherInterface.Update(listTeachers, option);
+
+                    listTeachers = TeacherInterface.Update(listTeachers, option2);
                     System.Console.WriteLine("\nThe teachers list have been updated, here's the current list:\n");
                     Thread.Sleep(1000);
                     TeacherInterface.listTeachers(listTeachers);
